@@ -164,8 +164,15 @@ def bstToArr(root, a):
         #print(root.data)
         a.append(root.data)
         bstToArr(root.right,a)
-
+def sort(arr):
+    root = newNode(arr[0])
+    for i in range(1,len(arr)):
+        insertRec(root, arr[i])
+    a = []
+    bstToArr(root, a)
+    return a
 def main():
+    #Num 1 test
     '''
     root = newNode(10)
     insertIter(root, 5)
@@ -200,19 +207,11 @@ def main():
     print(findMinRec(root))
     print(findMaxRec(root))
 '''
-arr = [4,5,6,1,2,3]
-root = newNode(arr[0])
-for i in range(1,len(arr)):
-    insertRec(root, arr[i])
-a= []
-print("\n")
-displayNodes(root)
-print("\n")
-bstToArr(root, a)
-print(a)
-for i in range(len(arr)):
-    root = delIter(root, arr[i])
 
-#displayNodes(root)
+# Number 2 test
+arr = [4,5,6,1,2,3]
+print(sort(arr))
+
+
 if __name__ == "__main__":
     main()
