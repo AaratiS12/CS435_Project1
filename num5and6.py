@@ -473,17 +473,17 @@ def main():
   
     nums = getRandomArray(10000)
     nums2 = getSortedArray(10000)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-    '''
+    
     root1 = None
     for i in range(10000):
-        root1 = insertRecAVL(root1, nums[i])
+        root1 = insertIterAVL(root1, nums[i])
     print("num levels in AVL is "+ str(countAVL))
     root2 = newNode(nums[0])
     for i in range(1, 10000):
         insertIterBST(root2, nums[i])
     print("num levels in BST is "+ str(countBST))
-    '''
     
+    '''
     root1 = None
     for i in range(10000):
         root1 = insertIterAVL(root1, nums2[i])
@@ -492,7 +492,7 @@ def main():
     for i in range(1, 10000):
         insertIterBST(root2, nums2[i])
     print("num levels in BST is "+ str(countBST))
-    
+    '''
 
 if __name__ == "__main__":
     main()
