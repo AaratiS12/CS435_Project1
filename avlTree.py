@@ -146,7 +146,7 @@ def findPrevIter(curr):
 def findMinRec(root):
     if root.right is None:
         return root
-    root = findPrevRec(root.right)
+    root = findMinRec(root.right)
     return root.data
 
 
@@ -161,7 +161,7 @@ def findMinIter(root):
 def findMaxRec(root):
     if root.right is None:
         return root
-    root = findPrevRec(root.right)
+    root = findMaxRec(root.right)
     return root.data
 
 def findMaxIter(root):
